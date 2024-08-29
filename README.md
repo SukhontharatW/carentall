@@ -1,8 +1,10 @@
-# React + Vite
+**Overview**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Carentall is a landing page for finding the perfect rental car. Easily search our fleet, review detailed car information, and explore our value offers. Access contact details for support and inquiries.
 
-Currently, two official plugins are available:
+**Purpose** : The purpose of this project is to demonstrate my skills in Frontend Development. Credit for design goes to Peterdraw studio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Built with** : React, SASS/SCSS, HTML, JavaScript
+
+**Demo** : [https://probuild-dev.netlify.app/](https://carentall-dev.netlify.app/)
+

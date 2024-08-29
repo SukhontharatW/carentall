@@ -1,0 +1,36 @@
+// COLOR VARIABLES
+$color-black: #1d1e21;
+$color-grey: #999a9b;
+$color-grey-light: #fafafa;
+$color-grey-light-2: #dadadb;
+$color-grey-light-3: #f4f4f4;
+$color-grey-light-4: #eee;
+$color-white: #fff;
+$color-blue: #3083ff;
+$color-yellow: #ffbd3d;
+.bg {
+  &__white {
+    background-color: $color-white;
+  }
+  &__grey {
+    background-color: $color-grey-light;
+  }
+  &__black {
+    background-color: $color-black;
+  }
+}
+
+.color {
+  &__white {
+    color: $color-white;
+  }
+  &__special {
+    color: #eee !important;
+  }
+  &__blue {
+    color: $color-blue !important;
+  }
+  &__yellow {
+    color: $color-yellow;
+  }
+}

@@ -1,0 +1,130 @@
+@use "../global/" as *;
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.8rem 0rem;
+  // border: 1px solid red;
+  &__logo {
+    width: 20.7rem;
+    height: auto;
+    @media (max-width: 1200px) {
+      width: 18.7rem;
+    }
+    @media (max-width: 900px) {
+    }
+    @media (max-width: 700px) {
+      width: 16.7rem;
+    }
+    @media (max-width: 430px) {
+    }
+    @media (max-width: 360px) {
+      width: 14.7rem;
+    }
+  }
+  &__bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    @media (max-width: 1100px) {
+      gap: 2rem;
+    }
+  }
+  &__item {
+    list-style: none;
+    position: relative;
+    // border: 1px solid red;
+    transition: all 0.3s;
+
+    &:first-child {
+      margin-right: auto;
+    }
+    &:last-child {
+      margin-left: 6.4rem;
+      padding: 1.6rem 2.4rem;
+      @media (max-width: 1300px) {
+        margin-left: 2rem;
+      }
+      @media (max-width: 1200px) {
+        margin-left: 0rem;
+      }
+    }
+
+    &:hover {
+      color: $color-blue;
+      transform: translateY(0);
+      transition-duration: 0.35s;
+    }
+    &:active {
+      color: $color-blue;
+      transform: translateY(0.2rem);
+      transition-duration: 0.35s;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+      color: $color-blue;
+    }
+    &:active {
+      color: $color-blue;
+    }
+  }
+}
+.nav__btn--menu {
+  position: absolute;
+  font-size: 3.6rem;
+  top: 0;
+  right: 0;
+  transform: translate(0%, -16%);
+  color: inherit;
+  display: flex;
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+}
+.nav__btn--close {
+  font-size: 3rem;
+  color: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav__bar.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 40rem;
+  z-index: 999;
+  background-color: rgba($color-white, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: -10px 0 10px rgba($color-black, 0.1);
+  // display: flex;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2.8rem 4rem;
+  gap: 2rem;
+
+  .nav__item {
+    margin-left: 0rem;
+    padding: 1rem 1rem;
+  }
+}
+@media (max-width: 1000px) {
+  .nav__btn--menu {
+    display: flex;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+}

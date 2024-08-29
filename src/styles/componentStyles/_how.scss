@@ -1,0 +1,203 @@
+@use "../global/" as *;
+.container__search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 777;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 12rem var(--space-side);
+}
+
+.search-form {
+  // width: 100%;
+  padding: 3rem 2.4rem;
+  border-radius: 14px;
+  background-color: $color-white;
+  box-shadow: 0px 4px 56px 0px rgba(29, 30, 33, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 6rem;
+  row-gap: 4rem;
+
+  @media (max-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 430px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 6rem;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.8rem;
+    min-width: max-content;
+  }
+  &__label {
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: $color-grey-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+  }
+  &__button {
+    padding: 1.6rem 6rem;
+    border-radius: 14px;
+    background-color: $color-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.how {
+  &__brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &--item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & img {
+        width: 100%;
+        height: auto;
+        @media (max-width: 1100px) {
+          width: 90%;
+          height: auto;
+        }
+        @media (max-width: 900px) {
+          width: 80%;
+          height: auto;
+        }
+        @media (max-width: 700px) {
+          width: 70%;
+          height: auto;
+        }
+        @media (max-width: 600px) {
+          width: 65%;
+          height: auto;
+        }
+        @media (max-width: 430px) {
+          width: 60%;
+          height: auto;
+        }
+      }
+    }
+    @media (max-width: 1100px) {
+      margin-top: 6rem;
+    }
+    @media (max-width: 430px) {
+      margin-top: 13rem;
+    }
+  }
+  &__section {
+    margin-top: 9.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6.4rem;
+    width: 100%;
+  }
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  &__steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, 24rem);
+    width: 100%;
+    gap: 2rem;
+
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(3, 22rem);
+      gap: 1.4rem;
+    }
+    @media (max-width: 740px) {
+      grid-template-columns: repeat(3, 20rem);
+    }
+    @media (max-width: 700px) {
+      grid-template-columns: repeat(3, 18rem);
+    }
+    @media (max-width: 530px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 4rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.4rem;
+  }
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.2rem 3.2rem 1rem 3.2rem;
+    border-radius: 2.4rem;
+    background-color: $color-white;
+    box-shadow: 0px 12px 32px 0px rgba(153, 154, 155, 0.16);
+
+    & img {
+      width: 5.6rem;
+      height: 5.6rem;
+      background-color: $color-white;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    @media (max-width: 800px) {
+      & .p__xl--normal {
+        font-size: 1.8rem;
+      }
+      & .p__reg--light {
+        font-size: 1.4rem;
+      }
+    }
+    @media (max-width: 740px) {
+    }
+    @media (max-width: 530px) {
+      & .p__xl--normal {
+        font-size: 2rem;
+      }
+      & .p__reg--light {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
